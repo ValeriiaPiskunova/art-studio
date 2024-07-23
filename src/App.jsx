@@ -18,10 +18,10 @@ function App() {
       <Header />
       <main className="main">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/art-studio" element={<Home />} />
+          <Route path="/art-studio/about" element={<About />} />
+          <Route path="/art-studio/services" element={<Services />} />
+          <Route path="/art-studio/contacts" element={<Contacts />} />
         </Routes>
       </main>
       <Footer />

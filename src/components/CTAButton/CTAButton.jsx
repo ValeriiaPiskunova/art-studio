@@ -6,7 +6,7 @@ const CTAButton = ({ transparent }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/contacts");
+    navigate("/art-studio/contacts");
   };
 
   return (
