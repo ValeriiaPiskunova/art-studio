@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../../components/Heading/Heading";
 import Clients from "../../components/Clients/Clients";
 import CTAButton from "../../components/CTAButton/CTAButton";
+import PhotographyWeatherWidget from "../../components/PhotographyWeatherWidget/PhotographyWeatherWidget";
 import ImageContainer from "../../components/Portfolio/Portfolio";
 import "./Home.scss";
 
@@ -42,6 +43,7 @@ const Home = () => {
               fugiat nulla pariatur.
             </p>
           </div>
+          <PhotographyWeatherWidget />
         </div>
       </section>
 

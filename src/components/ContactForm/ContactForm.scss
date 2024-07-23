@@ -1,4 +1,5 @@
 @import "../../assets/mixins.scss";
+
 .contact-form-container {
   max-width: 600px;
   width: 100%;
@@ -30,6 +31,10 @@
       .error {
         color: red;
         font-size: 0.875rem;
+      }
+
+      .input-error {
+        border-bottom: 2px solid red;
       }
     }
 

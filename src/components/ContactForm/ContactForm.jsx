@@ -1,100 +1,111 @@
-import React, { useState } from "react";
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { motion } from "framer-motion";
 import "./ContactForm.scss";
 
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(4, "Name must be at least 4 characters")
+    .required("Name is required"),
+  email: Yup.string()
+    .required("Email is required")
+    .test("is-valid-email", "Email is invalid", (value) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(value);
+    }),
+  message: Yup.string()
+    .min(10, "Message must be at least 10 characters")
+    .required("Message is required"),
+});
+
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [formErrors, setFormErrors] = useState({});
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const validateForm = () => {
-    const errors = {};
-
-    if (!formData.name) errors.name = "Name is required";
-    if (!formData.email) {
-      errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is invalid";
-    }
-    if (!formData.message) errors.message = "Message is required";
-
-    return errors;
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const errors = validateForm();
-    if (Object.keys(errors).length === 0) {
-      setIsModalOpen(true);
-    } else {
-      setFormErrors(errors);
-    }
-  };
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
     <div className="contact-form-container">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            placeholder="Enter your name"
-            required
-          />
-          {formErrors.name && (
-            <span className="error">{formErrors.name}</span>
-          )}
-        </div>
-        <div className="form-group">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Enter your email"
-            required
-          />
-          {formErrors.email && (
-            <span className="error">{formErrors.email}</span>
-          )}
-        </div>
-        <div className="form-group">
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            placeholder="Enter your message"
-            required
-          ></textarea>
-          {formErrors.message && (
-            <span className="error">{formErrors.message}</span>
-          )}
-        </div>
-        <button type="submit">Send</button>
-      </form>
+      <Formik
+        initialValues={{ name: "", email: "", message: "" }}
+        validationSchema={validationSchema}
+        onSubmit={(values, { resetForm }) => {
+          setIsModalOpen(true);
+          resetForm();
+        }}
+      >
+        {({ errors, touched }) => (
+          <Form className="contact-form">
+            <div className="form-group">
+              <Field
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                className={
+                  errors.name && touched.name ? "input-error" : ""
+                }
+              />
+              <ErrorMessage
+                name="name"
+                component="span"
+                className="error"
+              />
+            </div>
+            <div className="form-group">
+              <Field
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                className={
+                  errors.email && touched.email ? "input-error" : ""
+                }
+              />
+              <ErrorMessage
+                name="email"
+                component="span"
+                className="error"
+              />
+            </div>
+            <div className="form-group">
+              <Field
+                as="textarea"
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                className={
+                  errors.message && touched.message
+                    ? "input-error"
+                    : ""
+                }
+              />
+              <ErrorMessage
+                name="message"
+                component="span"
+                className="error"
+              />
+            </div>
+            <button type="submit">Send</button>
+          </Form>
+        )}
+      </Formik>
       {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <p>Your message sent</p>
+        <motion.div
+          className="modal"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="modal-content"
+            initial={{ y: "-100vh" }}
+            animate={{ y: "0" }}
+          >
+            <p>Your message was sent!</p>
             <button onClick={() => setIsModalOpen(false)}>
               Close
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );
