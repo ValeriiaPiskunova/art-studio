@@ -1,0 +1,139 @@
+@import "../../assets/mixins.scss";
+
+.about {
+  &-info,
+  &-team {
+    padding: 40px 20px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+}
+
+.about-team {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    flex: 1;
+    @include text-size;
+    color: $gray;
+    max-width: 580px;
+  }
+
+  span {
+    @include subtitle-size;
+  }
+
+  h2 {
+    @include heading-medium;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .about-team__text {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.about-info {
+  &__container {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  &__heading {
+    @include heading-medium;
+
+    &--medium {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 38px;
+      letter-spacing: -0.44999998807907104px;
+    }
+
+    &--large {
+      @include heading-large;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__first-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+
+    &__stat {
+      flex: 1;
+      padding: 0.5rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      @include text-size;
+    }
+  }
+
+  &__text {
+    padding-top: 2rem;
+    @include text-size;
+    color: $gray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+      width: 31.5%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    :nth-child(4),
+    :nth-child(5) {
+      width: 48%;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

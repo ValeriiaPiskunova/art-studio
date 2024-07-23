@@ -1,0 +1,64 @@
+@import "../../assets/mixins.scss";
+
+.services-list-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service {
+  &-item {
+    border: 1px solid $gray;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__title-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+
+    &:hover {
+      background-color: $light-gray;
+      padding: 1.8rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    @include heading-medium;
+  }
+
+  &__description-container {
+    padding: 1.5rem;
+    background-color: $light-gray;
+    overflow: hidden;
+  }
+
+  &__description {
+    margin: 0;
+    @include text-size;
+    color: $gray;
+  }
+}
+
+@media (max-width: 768px) {
+  .service {
+    &__title-container {
+      padding: 1.2rem;
+    }
+
+    &__description-container {
+      padding: 1.2rem;
+    }
+  }
+}

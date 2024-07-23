@@ -1,0 +1,75 @@
+@import "../../assets/mixins.scss";
+
+.footer {
+  background-color: $light-gray;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1rem;
+  }
+
+  &__column {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem 0;
+  }
+
+  &__title {
+    @include heading-large;
+    margin: 0 0 32px 0;
+  }
+
+  &__heading {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.9599999785423279px;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      margin: 0.5rem 0;
+
+      a {
+        @include heading-small;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 60px 0 30px 0;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 34px;
+      letter-spacing: -0.44999998807907104px;
+      color: $gray;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__column {
+      text-align: center;
+      margin: 0.5rem;
+    }
+  }
+}

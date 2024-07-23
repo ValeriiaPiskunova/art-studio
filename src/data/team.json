@@ -1,0 +1,47 @@
+[
+  {
+    "photo": "img/about/anne-whiteman.webp",
+    "alt": "A woman with long hair wearing a hat.",
+    "name": "Anne Whiteman",
+    "position": "Creative DIRECTOR",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "linkedin": "https://www.linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  {
+    "photo": "img/about/aurelia-hawthorne.webp",
+    "alt": "A stylish woman in a white blazer and gold necklace.",
+    "name": "Aurelia Hawthorne",
+    "position": "head of photography",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "linkedin": "https://www.linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  {
+    "photo": "img/about/isabella-kensington.webp",
+    "alt": "A woman in a black blazer accessorized with a gold bracelet.",
+    "name": "Isabella Kensington",
+    "position": "VP Content",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "linkedin": "https://www.linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  {
+    "photo": "img/about/genevieve-laurent.webp",
+    "alt": "A woman in a black suit sitting on a chair.",
+    "name": "Genevieve Laurent",
+    "position": "Sales and marketing",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "linkedin": "https://www.linkedin.com",
+    "twitter": "https://twitter.com"
+  },
+  {
+    "photo": "img/about/profile.webp",
+    "alt": "A woman in a black suit sitting on a chair.",
+    "name": "Alice Mann",
+    "position": "Sales and marketing",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "linkedin": "https://www.linkedin.com",
+    "twitter": "https://twitter.com"
+  }
+]

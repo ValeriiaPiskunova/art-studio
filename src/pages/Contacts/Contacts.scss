@@ -1,0 +1,88 @@
+@import "../../assets/mixins.scss";
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.contacts-info {
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
+
+  &__image {
+    width: 776px;
+    height: auto;
+    border-radius: 8px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__details {
+    margin-left: 2rem;
+    max-width: 400px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    a {
+      font-weight: 500;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.contacts-heading {
+  @include heading-medium;
+  margin: 1rem 0;
+}
+
+.contacts-text {
+  @include text-size;
+  color: $gray;
+  margin: 0;
+}
+
+.contacts-message {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 2rem;
+
+  &__info {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-info__container,
+  .contacts-message {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-section__details {
+    margin-top: 1rem;
+  }
+
+  .contacts-message {
+    .contacts-message__info {
+      margin-bottom: 2rem;
+    }
+  }
+}

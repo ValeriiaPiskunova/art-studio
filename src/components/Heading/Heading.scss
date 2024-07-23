@@ -1,0 +1,22 @@
+@import "../../assets/mixins.scss";
+
+.heading {
+  padding: 15px 10px;
+
+  &__subtitle {
+    @include subtitle-size;
+    display: block;
+  }
+
+  &__title {
+    @include heading-large;
+    margin: 0;
+  }
+
+  &--right {
+    .heading__subtitle,
+    .heading__title {
+      text-align: right;
+    }
+  }
+}
