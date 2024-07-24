@@ -12,7 +12,7 @@ const Home = () => {
       <section className="hero">
         <img
           className="hero__image"
-          src="img/home/hero-section.webp"
+          src="/art-studio/img/home/hero-section.webp"
           alt="A woman with curly hair adorned with a golden flower and intricate earrings, looking to the side against a floral-patterned background."
           loading="lazy"
         />
@@ -63,7 +63,7 @@ const Home = () => {
           <div className="template__container">
             <img
               className="template__img"
-              src="img/home/template.webp"
+              src="/art-studio/img/home/template.webp"
               alt="A woman in a white dress poses while another woman adjusts a camera in a rustic studio setting."
               loading="lazy"
             />

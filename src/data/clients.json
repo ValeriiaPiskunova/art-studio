@@ -1,20 +1,20 @@
 [
   {
-    "image": "img/home/clients-first.webp",
+    "image": "/art-studio/img/home/clients-first.webp",
     "alt": "A woman in a green dress adorned with gold jewelry.",
     "name": "Evander Amara",
     "city": "PARIS",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
   },
   {
-    "image": "img/home/clients-second.webp",
+    "image": "/art-studio/img/home/clients-second.webp",
     "alt": "A woman in a white shawl standing in the desert under the scorching sun.",
     "name": "Alice Bathimore",
     "city": "Dubai",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
   },
   {
-    "image": "img/home/clients-third.webp",
+    "image": "/art-studio/img/home/clients-third.webp",
     "alt": " A woman in a black blazer and gold jewelry.",
     "name": "Maxim Owen",
     "city": "Brooklyn",
