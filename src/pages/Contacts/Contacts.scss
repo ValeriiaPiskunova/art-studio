@@ -1,33 +1,48 @@
-@import "../../assets/mixins.scss";
+@import "../assets/mixins.scss";
 
 .contact-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .contacts-info {
   &__container {
     display: flex;
-    align-items: flex-start;
+    gap: 2rem;
     margin: 2rem 0;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__image {
-    width: 776px;
+    width: 50%;
     height: auto;
+    max-width: 776px;
     border-radius: 8px;
 
     @media (max-width: 768px) {
       width: 100%;
-      height: auto;
     }
   }
 
   &__details {
     margin-left: 2rem;
     max-width: 400px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-top: 1rem;
+      text-align: center;
+    }
   }
 
   &__social {
@@ -36,6 +51,7 @@
     margin-top: 2rem;
 
     a {
+      color: $darkest;
       font-weight: 500;
     }
 
@@ -59,30 +75,31 @@
 .contacts-message {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2rem;
   width: 100%;
-  padding: 2rem;
+  max-width: 1200px;
+  padding: 2rem 0;
 
-  &__info {
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contacts-info__container,
-  .contacts-message {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0;
   }
 
-  .contact-section__details {
-    margin-top: 1rem;
-  }
+  &__info {
+    max-width: 370px;
 
-  .contacts-message {
-    .contacts-message__info {
+    @media (max-width: 768px) {
       margin-bottom: 2rem;
+    }
+  }
+
+  .contact-form-container {
+    width: 545px;
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
 }

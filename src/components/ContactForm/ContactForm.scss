@@ -1,41 +1,72 @@
 @import "../../assets/mixins.scss";
 
-.contact-form-container {
-  max-width: 600px;
+.contact-form {
+  .form-group {
+    margin-bottom: 1rem;
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      padding: 1rem;
+      border: none;
+      border-bottom: 2px solid $darkest;
+      outline: none;
+      font-size: 16px;
+      color: $darkest;
+
+      &::placeholder {
+        color: $gray;
+      }
+    }
+
+    textarea {
+      height: auto;
+      resize: vertical;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.875rem;
+    }
+
+    .input-error {
+      border-bottom: 2px solid red;
+    }
+  }
+
+  button {
+    padding: 0.5rem 2rem;
+    background-color: $darkest;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-gray;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  .contact-form {
-    .form-group {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+
+    p {
       margin-bottom: 1rem;
-
-      input,
-      textarea {
-        width: 100%;
-        max-width: 545px;
-        padding: 1rem;
-        border: none;
-        border-bottom: 2px solid $darkest;
-        outline: none;
-        font-size: 16px;
-        color: $darkest;
-
-        &::placeholder {
-          color: $gray;
-        }
-      }
-
-      textarea {
-        height: auto;
-        resize: vertical;
-      }
-
-      .error {
-        color: red;
-        font-size: 0.875rem;
-      }
-
-      .input-error {
-        border-bottom: 2px solid red;
-      }
     }
 
     button {
@@ -50,49 +81,14 @@
       }
     }
   }
+}
 
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    .modal-content {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-
-      p {
-        margin-bottom: 1rem;
-      }
-
-      button {
-        padding: 0.5rem 2rem;
-        background-color: $darkest;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        &:hover {
-          background-color: $dark-gray;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .contact-form {
-      .form-group {
-        input,
-        textarea {
-          max-width: 75%;
-        }
+@media (max-width: 768px) {
+  .contact-form {
+    .form-group {
+      input,
+      textarea {
+        max-width: 75%;
       }
     }
   }
