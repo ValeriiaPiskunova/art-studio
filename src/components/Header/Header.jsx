@@ -17,22 +17,22 @@ const Header = () => {
       <nav className={`header__nav nav ${isOpen ? "nav-open" : ""}`}>
         <ul className="nav__list">
           <li className="nav__list-item">
-            <Link to="/art-studio" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li className="nav__list-item">
-            <Link to="/art-studio/about" onClick={toggleMenu}>
+            <Link to="/about" onClick={toggleMenu}>
               About
             </Link>
           </li>
           <li className="nav__list-item">
-            <Link to="/art-studio/services" onClick={toggleMenu}>
+            <Link to="/services" onClick={toggleMenu}>
               Services
             </Link>
           </li>
           <li className="nav__list-item">
-            <Link to="/art-studio/contacts" onClick={toggleMenu}>
+            <Link to="/contacts" onClick={toggleMenu}>
               Contacts
             </Link>
           </li>
