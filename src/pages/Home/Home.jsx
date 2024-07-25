@@ -1,9 +1,9 @@
 import React from "react";
-import Heading from "../../components/Heading/Heading";
-import Clients from "../../components/Clients/Clients";
-import CTAButton from "../../components/CTAButton/CTAButton";
-import PhotographyWeatherWidget from "../../components/PhotographyWeatherWidget/PhotographyWeatherWidget";
-import ImageContainer from "../../components/Portfolio/Portfolio";
+import Heading from "@/components/Heading/Heading";
+import Clients from "@/components/Clients/Clients";
+import CTAButton from "@/components/CTAButton/CTAButton";
+import PhotographyWeatherWidget from "@/components/PhotographyWeatherWidget/PhotographyWeatherWidget";
+import ImageContainer from "@/components/Portfolio/Portfolio";
 import "./Home.scss";
 
 const Home = () => {
@@ -14,7 +14,6 @@ const Home = () => {
           className="hero__image"
           src="/art-studio/img/home/hero-section.webp"
           alt="A woman with curly hair adorned with a golden flower and intricate earrings, looking to the side against a floral-patterned background."
-          loading="lazy"
         />
         <h1>
           Award winning <br />

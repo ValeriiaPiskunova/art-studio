@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "../../components/Heading/Heading";
-import ContactForm from "../../components/ContactForm/ContactForm";
+import Heading from "@/components/Heading/Heading";
+import ContactForm from "@/components/ContactForm/ContactForm";
 import "./Contacts.scss";
 
 const Contacts = () => {

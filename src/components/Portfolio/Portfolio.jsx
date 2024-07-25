@@ -1,5 +1,5 @@
 import React from "react";
-import portfolioData from "../../data/portfolio.json";
+import portfolioData from "@/data/portfolio.json";
 import "./Portfolio.scss";
 
 const ImageContainer = () => {

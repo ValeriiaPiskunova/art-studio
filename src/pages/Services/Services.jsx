@@ -1,7 +1,7 @@
 import React from "react";
-import Heading from "../../components/Heading/Heading";
-import ServicesList from "../../components/ServicesList/ServicesList";
-import Banner from "../../components/Banner/Banner";
+import Heading from "@/components/Heading/Heading";
+import ServicesList from "@/components/ServicesList/ServicesList";
+import Banner from "@/components/Banner/Banner";
 import "./Services.scss";
 
 const Services = () => {

@@ -4,7 +4,7 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
-import data from "../../data/team.json";
+import data from "@/data/team.json";
 import "./Team.scss";
 
 const Team = () => {

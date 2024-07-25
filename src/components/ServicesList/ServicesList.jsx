@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import services from "../../data/services.json";
+import services from "@/data/services.json";
 import "./ServicesList.scss";
 
 const ServicesList = () => {

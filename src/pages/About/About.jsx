@@ -1,8 +1,8 @@
 import React from "react";
-import Heading from "../../components/Heading/Heading";
-import Banner from "../../components/Banner/Banner";
-import Team from "../../components/Team/Team";
-import Counter from "../../components/Counter/Counter";
+import Heading from "@/components/Heading/Heading";
+import Banner from "@/components/Banner/Banner";
+import Team from "@/components/Team/Team";
+import Counter from "@/components/Counter/Counter";
 import "./About.scss";
 
 const About = () => {
