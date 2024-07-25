@@ -1,0 +1,1 @@
+import{j as n}from"./react-BPlRjfAT.js";import{a as s}from"./react-router-CuWZLd_q.js";const e=({transparent:t})=>{const a=s(),o=()=>{a("/contacts")};return n.jsx("button",{className:`cta-button ${t?"cta--transparent":""}`,onClick:o,children:"Book a call"})};export{e as C};
