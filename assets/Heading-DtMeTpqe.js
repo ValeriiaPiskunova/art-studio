@@ -1,0 +1,1 @@
+import{j as e}from"./react-BPlRjfAT.js";const t=({subtitle:s,title:a,reverse:n})=>e.jsxs("div",{className:`heading ${n?"heading--right":""}`,children:[e.jsx("span",{className:"heading__subtitle",children:s}),e.jsx("h2",{className:"heading__title",dangerouslySetInnerHTML:{__html:a}})]});export{t as H};
